@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestoreSchede.GUI.schermataPrincipale.GestoreDiSistema">
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <center>
+                <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <Tab fx:id="tabSchede" text="Gestione Schede">
+                        <BorderPane prefHeight="200.0" prefWidth="200.0">
+                            <center>
+                                <TableView fx:id="tabellaSchede" BorderPane.alignment="CENTER">
+                                    <columns>
+                                        <TableColumn fx:id="colonnaIDScheda" prefWidth="129.48259449005127" text="ID Scheda" />
+                                        <TableColumn fx:id="colonnaNomeScheda" prefWidth="402.5174255371094" text="Nome Scheda" />
+                                        <TableColumn fx:id="colonnaDataCreazioneScheda" prefWidth="75.0" text="Data di creazione" />
+                                        <TableColumn fx:id="colonnaEnteRichiedente" prefWidth="75.0" text="Ente richiedente" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </center>
+                            <top>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0" BorderPane.alignment="CENTER_LEFT">
+                                    <BorderPane.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </BorderPane.margin>
+                                    <TextField fx:id="campoDiRicercaSchede" promptText="cerca" />
+                                    <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="25.0">
+                                        <HBox.margin>
+                                            <Insets />
+                                        </HBox.margin>
+                                    </Separator>
+                                    <Button mnemonicParsing="false" onAction="#mostraAggiungiScheda" text="Genera scheda" />
+                                    <Button mnemonicParsing="false" onAction="#modificaScheda" text="Modifica scheda" />
+                                    <Button mnemonicParsing="false" onAction="#rimuoviScheda" prefHeight="25.0" prefWidth="108.0" text="Elimina scheda " />
+                           <Button mnemonicParsing="false" onAction="#mostraInfoScheda" text="Visualizza dettagli scheda" />
+                                    <Separator orientation="VERTICAL" />
+                                    <Button mnemonicParsing="false" onAction="#mostraEsportaScheda" text="Esporta scheda" />
+                                </HBox>
+                            </top>
+                        </BorderPane>
+                    </Tab>
+                    <Tab text="Gestione Elementi">
+                        <BorderPane fx:id="borderPaneElementi" prefHeight="200.0" prefWidth="200.0">
+                            <center>
+                                <TableView fx:id="tabellaDipendenti">
+                                    <columns>
+                                        <TableColumn fx:id="colonnaNomeDipendente" prefWidth="75.0" text="Nome" />
+                                        <TableColumn fx:id="colonnaCognomeDipendente" prefWidth="75.0" text="Cognome" />
+                                        <TableColumn fx:id="colonnaDataNascitaDipendente" prefWidth="75.0" text="Data di nascita" />
+                                        <TableColumn fx:id="colonnaMansioneDipendente" prefWidth="75.0" text="Mansione" />
+                                        <TableColumn fx:id="colonnaNumTelefonoDipendente" prefWidth="75.0" text="Telefono" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </center>
+                            <top>
+                                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="729.0" spacing="10.0" BorderPane.alignment="CENTER_LEFT">
+                                    <BorderPane.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </BorderPane.margin>
+                                    <TextField fx:id="campoDiRicercaElementi" promptText="cerca" />
+                                    <Separator orientation="VERTICAL">
+                                        <HBox.margin>
+                                            <Insets />
+                                        </HBox.margin>
+                                    </Separator>
+                                    <Button fx:id="aggiungiElementoBtn" mnemonicParsing="false" onAction="#mostraAggiungiElemento" prefHeight="25.0" prefWidth="177.0" text="Crea nuovo elemento" />
+                                    <Button mnemonicParsing="false" onAction="#modificaElemento" prefHeight="25.0" prefWidth="167.0" text="Modifica elemento" />
+                                    <Button mnemonicParsing="false" onAction="#rimuoviElemento" prefHeight="25.0" prefWidth="155.0" text="Rimuovi elemento" />
+                           <Button mnemonicParsing="false" onAction="#mostraInfoElemento" prefHeight="25.0" prefWidth="120.0" text="Dettagli" />
+                           <Separator layoutX="148.0" layoutY="10.0" orientation="VERTICAL" />
+                                    <Separator opacity="0.0" prefHeight="1.0" prefWidth="46.0" HBox.hgrow="ALWAYS" />
+                                    <ChoiceBox fx:id="choiceBoxElementi" prefWidth="150.0" />
+                                </HBox>
+                            </top>
+                        </BorderPane>
+                    </Tab>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </center>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="File">
+                <MenuItem mnemonicParsing="false" onAction="#chiudiApplicazione" text="Chiudi Applicazione" />
+            </Menu>
+            <Menu mnemonicParsing="false" text="Modifica">
+                <Menu mnemonicParsing="false" text="Cambia look">
+                    <MenuItem mnemonicParsing="false" onAction="#setLookModena" text="Modena" />
+                    <MenuItem mnemonicParsing="false" onAction="#setLookCaspian" text="Caspian" />
+                </Menu>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Aiuto">
+                <MenuItem mnemonicParsing="false" onAction="#mostraSchermataInfo" text="Info" />
+            </Menu>
+        </MenuBar>
+    </top>
+</BorderPane>

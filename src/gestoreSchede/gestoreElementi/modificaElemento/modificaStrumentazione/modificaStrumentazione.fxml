@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gestoreSchede.gestoreElementi.modificaElemento.modificaStrumentazione.ModificaStrumentazione">
+   <top>
+       <ToolBar BorderPane.alignment="CENTER">
+           <BorderPane.margin>
+               <Insets/>
+           </BorderPane.margin>
+           <Button fx:id="apportaModificheBtn" mnemonicParsing="false" text="Apporta modifiche"/>
+           <Separator prefHeight="27.0" prefWidth="24.0"/>
+           <Button fx:id="annullaBtn" mnemonicParsing="false" text="Annulla"/>
+       </ToolBar>
+   </top>
+   <center>
+       <GridPane alignment="CENTER" prefHeight="454.0" prefWidth="417.0" BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="34.0" minWidth="0.0" prefWidth="34.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="100.54794216156006" prefWidth="106.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="141.0" prefWidth="141.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="74.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="337.0" minWidth="0.0" prefWidth="337.0"/>
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="208.0" minHeight="20.0" prefHeight="208.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES"/>
+           </rowConstraints>
+           <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+           </padding>
+           <TextField fx:id="campoNome" prefWidth="134.0" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+           <TextField fx:id="campoModello" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome*" GridPane.columnIndex="1"
+                 GridPane.rowIndex="1"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Modello"
+                 GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+           <FlowPane alignment="CENTER_LEFT" hgap="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2"
+                     GridPane.rowIndex="3">
+               <TextField fx:id="campoMarca" prefHeight="25.0" prefWidth="172.0"/>
+           </FlowPane>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero pezzi*"
+                 GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+           <TextField fx:id="campoNumeroPezzi" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipologia"
+                 GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca" GridPane.columnIndex="1"
+                 GridPane.rowIndex="3"/>
+           <TextField fx:id="campoTipologia" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Anno acquisto"
+                 GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+           <TextField fx:id="campoAnnoAcquisto" GridPane.columnIndex="2" GridPane.rowIndex="6"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrizione*"
+                 GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+           <TextArea fx:id="campoDescrizione" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="154.0"
+                     prefWidth="180.0" GridPane.columnIndex="2" GridPane.rowIndex="7"/>
+           <Label text="(*) campi obbligatori" GridPane.columnIndex="4" GridPane.rowIndex="8"/>
+           <Separator orientation="VERTICAL" prefHeight="50.0" prefWidth="242.0" GridPane.columnIndex="3"
+                      GridPane.rowIndex="3"/>
+           <Separator orientation="VERTICAL" prefHeight="50.0" prefWidth="255.0" GridPane.columnIndex="3"
+                      GridPane.rowIndex="2"/>
+           <Separator orientation="VERTICAL" prefHeight="50.0" prefWidth="293.0" GridPane.columnIndex="3"
+                      GridPane.rowIndex="1"/>
+           <Separator orientation="VERTICAL" prefHeight="50.0" prefWidth="259.0" GridPane.columnIndex="3"
+                      GridPane.rowIndex="4"/>
+           <Separator orientation="VERTICAL" prefHeight="50.0" prefWidth="241.0" GridPane.columnIndex="3"
+                      GridPane.rowIndex="5"/>
+           <Separator orientation="VERTICAL" prefHeight="50.0" prefWidth="211.0" GridPane.columnIndex="3"
+                      GridPane.rowIndex="6"/>
+           <Label alignment="BOTTOM_LEFT" prefHeight="86.0" prefWidth="200.0" text="Dipendente che la utilizza"
+                  GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+           <Label alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="307.0" text="Spazio in cui è ubicata"
+                  GridPane.columnIndex="4" GridPane.rowIndex="4"/>
+           <Button fx:id="selezDipendenteBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0"
+                   text="Seleziona Dipendente" GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+           <Button fx:id="selezSpazioBtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0"
+                   text="Seleziona Spazio" GridPane.columnIndex="4" GridPane.rowIndex="5"/>
+           <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <Label text="Attualmente selezionato:"/>
+               <Label fx:id="campoDipendenteSelezionato"/>
+           </HBox>
+           <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <Label text="Attualmente selezionato:"/>
+               <Label fx:id="campoSpazioSelezionato"/>
+           </HBox>
+       </GridPane>
+   </center>
+</BorderPane>

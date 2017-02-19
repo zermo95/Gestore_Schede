@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane prefHeight="431.0" prefWidth="343.0" xmlns="http://javafx.com/javafx/8.0.60"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gestoreSchede.gestoreElementi.aggiungiElemento.aggiungiSpazio.CreaSpazio">
+   <top>
+       <ToolBar BorderPane.alignment="CENTER">
+           <BorderPane.margin>
+               <Insets/>
+           </BorderPane.margin>
+           <Button fx:id="salvaSpazioBtn" mnemonicParsing="false" onAction="#aggiungiSpazio" text="Salva"/>
+           <Separator prefHeight="27.0" prefWidth="24.0"/>
+           <Button fx:id="annullaBtn" mnemonicParsing="false" onAction="#annullaOperazione" text="Annulla"/>
+       </ToolBar>
+   </top>
+   <center>
+       <GridPane alignment="CENTER" prefHeight="384.0" prefWidth="393.0" BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="100.54794216156006" prefWidth="115.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="166.0" prefWidth="166.0"/>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0"/>
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="50.0" minHeight="7.0" prefHeight="15.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="97.0" minHeight="50.0" prefHeight="84.0" vgrow="SOMETIMES"/>
+               <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES"/>
+           </rowConstraints>
+           <BorderPane.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+           </BorderPane.margin>
+           <TextField fx:id="campoNomeSpazio" prefWidth="180.0" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+           <TextField fx:id="campoUbicazioneSpazio" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome*" GridPane.columnIndex="1"
+                 GridPane.rowIndex="1"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubicazione*"
+                 GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+           <TextField fx:id="campoCapienzaSpazio" prefHeight="27.0" prefWidth="180.0" GridPane.columnIndex="2"
+                      GridPane.rowIndex="3"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero porte"
+                 GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+           <TextField fx:id="campoNumPorteSpazio" prefHeight="27.0" prefWidth="82.0" GridPane.columnIndex="2"
+                      GridPane.rowIndex="4"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero finestre"
+                 GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Capienza" GridPane.columnIndex="1"
+                 GridPane.rowIndex="3"/>
+           <TextField fx:id="campoNumFinestreSpazio" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Altre informazioni" GridPane.columnIndex="1"
+                 GridPane.rowIndex="7"/>
+           <TextArea fx:id="campoAltreInfoSpazio" GridPane.columnIndex="2" GridPane.rowIndex="7"/>
+           <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="(*) campi obbligatori"
+                  GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                   <Insets top="10.0"/>
+               </GridPane.margin>
+           </Label>
+       </GridPane>
+   </center>
+</BorderPane>

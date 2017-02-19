@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestoreSchede.gestoreElementi.aggiungiElemento.aggiungiDipendente.CreaDipendente">
+   <top>
+       <ToolBar prefHeight="61.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+           <BorderPane.margin>
+               <Insets />
+           </BorderPane.margin>
+           <Button fx:id="salvaDipendenteBtn" mnemonicParsing="false" onAction="#aggiungiDipendente" text="Salva" />
+           <Separator prefHeight="27.0" prefWidth="24.0" />
+           <Button fx:id="annullaOperazioneBtn" mnemonicParsing="false" onAction="#annullaOperazione" text="Annulla" />
+       </ToolBar>
+   </top>
+   <left>
+       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="770.0" BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="17.0" minWidth="10.0" prefWidth="11.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="110.0" prefWidth="120.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="157.0" prefWidth="173.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="4.0" prefWidth="110.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="110.0" prefWidth="107.0" />
+               <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="273.0" minWidth="174.0" prefWidth="199.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="38.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints maxHeight="29.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="109.0" minHeight="50.0" prefHeight="90.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="100.0" minHeight="22.0" prefHeight="79.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="93.0" minHeight="21.0" prefHeight="69.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="107.0" minHeight="32.0" prefHeight="84.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="108.0" minHeight="39.0" prefHeight="86.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="129.0" minHeight="36.0" prefHeight="78.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+           </padding>
+           <TextField fx:id="campoNome" prefWidth="134.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+           <TextField fx:id="campoCognome" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+           <DatePicker fx:id="campoData" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+           <TextField fx:id="campoMansione" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+           <TextField fx:id="campoNumTelefono" prefWidth="229.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+           <Text fx:id="textNumeroNonValido" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="error message" GridPane.columnIndex="5" GridPane.rowIndex="1">
+             <GridPane.margin>
+                 <Insets top="40.0" />
+             </GridPane.margin>
+           </Text>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome*" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Cognome*" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Mansione*" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono*" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Sesso*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+           <FlowPane alignment="CENTER_LEFT" hgap="20.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <RadioButton fx:id="maleBtn" mnemonicParsing="false" selected="true" text="Uomo">
+                   <toggleGroup>
+                       <ToggleGroup fx:id="sessoRadioButton" />
+                   </toggleGroup>
+               </RadioButton>
+               <RadioButton fx:id="femaleBtn" mnemonicParsing="false" text="Donna" toggleGroup="$sessoRadioButton" />
+           </FlowPane>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Codice Fiscale*" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+           <TextField fx:id="campoCodiceFiscale" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Data di nascita*" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+           <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+              <center>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+              </center>
+           </BorderPane>
+           <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+              <center>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+              </center>
+           </BorderPane>
+           <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+              <center>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+              </center>
+           </BorderPane>
+           <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+              <center>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+              </center>
+           </BorderPane>
+           <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+              <center>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+              </center>
+           </BorderPane>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Residente a" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+           <TextField fx:id="campoResidenza" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+           <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+              <center>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+              </center>
+           </BorderPane>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Via/Piazza" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+           <TextField fx:id="campoDomicilio" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+           <TextField fx:id="campoEmail" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nato a" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+           <TextField fx:id="campoCittaNascita" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Spazio occupato" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+           <Label alignment="CENTER" contentDisplay="CENTER" disable="true" text="(*) campi obbligatori" textAlignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="7">
+             <GridPane.margin>
+                 <Insets left="5.0" />
+             </GridPane.margin>
+           </Label>
+           <Button fx:id="selezSpazioBtn" mnemonicParsing="false" prefHeight="27.0" prefWidth="158.0" text="Seleziona Spazio" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+           <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="102.0" prefWidth="90.0" text="Attualmente:" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+           <Label fx:id="campoSpazioSelezionato" alignment="TOP_LEFT" prefHeight="79.0" prefWidth="199.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+       </GridPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="iText7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-barcodes-7.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-forms-7.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-io-7.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-kernel-7.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-layout-7.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-pdfa-7.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-pdftest-7.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-sign-7.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-barcodes-7.0.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-forms-7.0.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-io-7.0.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-kernel-7.0.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-layout-7.0.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-pdfa-7.0.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-sign-7.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-barcodes-7.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-forms-7.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-io-7.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-kernel-7.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-layout-7.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-pdfa-7.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-pdftest-7.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Università/Secondo Anno/Sistemi Software/Caso di Studio/Consegna/[LibrerieEsterne]PARTE2(©APTSoftware)/iText7/itext7-sign-7.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

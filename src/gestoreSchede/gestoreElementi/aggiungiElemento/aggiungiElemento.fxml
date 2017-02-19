@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestoreSchede.gestoreElementi.aggiungiElemento.AggiungiElementoController">
+    <center>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <center>
+             <GridPane BorderPane.alignment="CENTER">
+                 <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                     <RowConstraints maxHeight="459.7818603515625" minHeight="10.0" prefHeight="47.742919921875" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="476.13697814941406" minHeight="10.0" prefHeight="359.257080078125" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="70.775634765625" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="58.224365234375" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                 <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#aggiungiDipendente" prefHeight="40.0" prefWidth="190.0" style="-fx-background-radius: 20;" text="Dipendente" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                         <Font name="System Bold" size="16.0" />
+                     </font>
+                 </Button>
+                 <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#aggiungiStrumentazione" prefHeight="40.0" prefWidth="190.0" style="-fx-background-radius: 20;" text="Strumentazione" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                         <Font name="System Bold" size="16.0" />
+                     </font>
+                 </Button>
+                 <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#aggiungiSpazio" prefHeight="40.0" prefWidth="190.0" style="-fx-background-radius: 20;" text="Spazio di lavoro" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                         <Font name="System Bold" size="16.0" />
+                     </font>
+                 </Button>
+                 <ImageView fitHeight="220.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <Image url="@../../GUI/img/imgAggElemento/sys-system-tool-tools-work-wrench-icon-9.png" />
+                 </ImageView>
+                 <ImageView fitHeight="237.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <Image url="@../../GUI/img/imgAggElemento/businessman.png" />
+                 </ImageView>
+                 <ImageView fitHeight="272.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <Image url="@../../GUI/img/imgAggElemento/building-icon.png" />
+                 </ImageView>
+             </GridPane>
+         </center>
+         <top>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Seleziona l'elemento da aggiungere" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </Text>
+         </top>
+      </BorderPane>
+    </center>
+   <top>
+       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <Button fx:id="tornaIndietroBtn" mnemonicParsing="false" onAction="#tornaIndietro" text="Torna Indietro" />
+       </ToolBar>
+   </top>
+</BorderPane>

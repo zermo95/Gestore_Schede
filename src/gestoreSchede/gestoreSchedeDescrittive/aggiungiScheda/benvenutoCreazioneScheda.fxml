@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestoreSchede.gestoreSchedeDescrittive.aggiungiScheda.AggiungiScheda">
+    <center>
+        <BorderPane BorderPane.alignment="CENTER">
+            <bottom>
+                <FlowPane alignment="CENTER" hgap="10.0" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets/>
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                    </padding>
+                    <Button mnemonicParsing="false" onAction="#chiudiSchermataAggiungiScheda" text="Annulla"/>
+                    <Button mnemonicParsing="false" onAction="#mostraAggiungiDipendente" text="Inizia"/>
+                </FlowPane>
+            </bottom>
+         <center>
+             <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                   prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                 <BorderPane.margin>
+                     <Insets top="30.0"/>
+                 </BorderPane.margin>
+                 <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Scheda">
+                     <font>
+                         <Font size="14.0"/>
+                     </font>
+                     <VBox.margin>
+                         <Insets bottom="5.0"/>
+                     </VBox.margin>
+                 </Text>
+                 <TextField fx:id="campoNomeScheda" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" prefWidth="550.0"
+                            promptText="inserisci un nome da associare alla scheda">
+                     <VBox.margin>
+                         <Insets bottom="20.0"/>
+                     </VBox.margin>
+                 </TextField>
+                 <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Ente richiedente">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                 </Text>
+                 <TextField fx:id="campoEnteRichiedente" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" prefWidth="550.0"
+                            promptText="inserisci il nome dell'ente che ha richiesto la scheda">
+                    <VBox.margin>
+                        <Insets bottom="20.0"/>
+                    </VBox.margin>
+                 </TextField>
+                 <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Testo introduttivo">
+                     <font>
+                         <Font size="14.0"/>
+                     </font>
+                     <VBox.margin>
+                         <Insets bottom="5.0"/>
+                     </VBox.margin>
+                 </Text>
+                 <TextArea fx:id="campoTestoIntroduttivo" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="550.0">
+                     <VBox.margin>
+                         <Insets bottom="10.0"/>
+                     </VBox.margin>
+                 </TextArea>
+             </VBox>
+         </center>
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+        </BorderPane>
+    </center>
+   <top>
+       <FlowPane alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+           <BorderPane.margin>
+               <Insets top="10.0"/>
+           </BorderPane.margin>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                 text="Benvenuto nella procedura guidata per la creazione di una nuova scheda descrittiva"
+                 textAlignment="CENTER" wrappingWidth="758.560546875">
+               <font>
+                   <Font name="Verdana" size="19.0"/>
+               </font>
+           </Text>
+       </FlowPane>
+   </top>
+</BorderPane>

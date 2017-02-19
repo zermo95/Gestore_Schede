@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestoreSchede.gestoreElementi.GestoreDipendenti">
+   <bottom>
+       <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="0.0" prefWidth="0.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="77.0" prefWidth="96.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="117.0" prefWidth="152.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="25.0" prefWidth="61.0" />
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="4.0" prefWidth="93.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="376.0" minWidth="10.0" prefWidth="173.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints maxHeight="49.0" minHeight="0.0" prefHeight="13.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="109.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="109.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="100.0" minHeight="22.0" prefHeight="47.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="93.0" minHeight="21.0" prefHeight="46.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="113.0" minHeight="32.0" prefHeight="48.0" vgrow="SOMETIMES" />
+               <RowConstraints maxHeight="146.0" minHeight="39.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="186.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="101.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+           </padding>
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Cognome:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Mansione:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Sesso:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Codice Fiscale:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Data di nascita:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+           <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Residente a:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Via/Piazza:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+         <Text fx:id="campoNome" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+         <Text fx:id="campoCognome" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+         <Text fx:id="campoCodiceFiscale" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+         <Text fx:id="campoMansione" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+         <Text fx:id="campoNumTelefono" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+         <Text fx:id="campoSesso" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+         <Button alignment="CENTER" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="87.0" text="Chiudi" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+         <Text fx:id="campoData" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nato a:" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+         <Text fx:id="campoLuogoNascita" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+         <Text fx:id="campoEmail" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+         <Text fx:id="campoResidenza" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+         <Text fx:id="campoIndirizzo" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Spazio occupato:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+         <Text fx:id="campoSpazioOccupato" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+         <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+         <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+         <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+         <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+         <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+         <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+       </GridPane>
+   </bottom>
+   <top>
+      <ToolBar prefHeight="53.0" prefWidth="463.0" BorderPane.alignment="CENTER">
+         <items>
+            <Text fx:id="campoTesto" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="450.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </items>
+      </ToolBar>
+   </top>
+</BorderPane>
