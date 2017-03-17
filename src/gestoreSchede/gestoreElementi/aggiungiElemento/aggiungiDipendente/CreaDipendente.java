@@ -39,6 +39,24 @@ public class CreaDipendente implements Initializable {
         instance = new CreaDipendente();
     }
 
+    /* -------- Indici della ChoiceBox ---------*/
+    private static final int CHOICEBOX_INDEX_NESSUNO = 0;
+    private static final int CHOICEBOX_INDEX_DIRETTORE = 1;
+    private static final int CHOICEBOX_INDEX_PROGRAMMATORE = 2;
+    private static final int CHOICEBOX_INDEX_MANAGER = 3;
+    private static final int CHOICEBOX_INDEX_SEGRETARIO = 4;
+    private static final int CHOICEBOX_INDEX_CONTABILE = 5;
+    private static final int CHOICEBOX_INDEX_BOSS = 6;
+
+    /* -------- Valori della ChoicheBox ---------*/
+    private static final String CHOICHEBOX_STRING_NESSUNO = "Seleziona";
+    private static final String CHOICHEBOX_STRING_DIRETTORE = "Direttore";
+    private static final String CHOICHEBOX_STRING_PROGRAMMATORE = "Programmatore";
+    private static final String CHOICHEBOX_STRING_MANAGER = "Manager";
+    private static final String CHOICHEBOX_STRING_SEGRETARIO = "Segretario";
+    private static final String CHOICHEBOX_STRING_CONTABILE = "Contabile";
+    private static final String CHOICHEBOX_STRING_BOSS = "Boss";
+    
     /**
      * Istanza del controller per l'aggiunta di un dipendente
      **/
@@ -69,7 +87,7 @@ public class CreaDipendente implements Initializable {
     @FXML
     private TextField campoDomicilio;
     @FXML
-    private TextField campoMansione;
+    private ChoiceBox<String> choiceBoxMansione = new ChoiceBox<>();
     @FXML
     private Label campoSpazioSelezionato;
     @FXML
@@ -82,6 +100,16 @@ public class CreaDipendente implements Initializable {
     private Button salvaDipendenteBtn;
     @FXML
     private Button annullaOperazioneBtn;
+    
+    private void inizializzaChoiceBox() {
+        // Imposta la ChoicheBox
+    	choiceBoxMansione.getItems().addAll(CHOICHEBOX_STRING_NESSUNO, CHOICHEBOX_STRING_DIRETTORE,
+    			CHOICHEBOX_STRING_PROGRAMMATORE, CHOICHEBOX_STRING_MANAGER, CHOICHEBOX_STRING_SEGRETARIO, CHOICHEBOX_STRING_CONTABILE, CHOICHEBOX_STRING_BOSS);
+    	
+    	// Imposta elemento di default
+    	choiceBoxMansione.setValue(CHOICHEBOX_STRING_NESSUNO);
+    	
+    }
 
 
     public static void mostraAggiungiDipendente() throws IOException {
@@ -142,13 +170,14 @@ public class CreaDipendente implements Initializable {
 
                 /* Controllo contatti/dati lavorativi */
                 campoNumTelefono.getText().isEmpty() ||
-                campoMansione.getText().isEmpty();
+                choiceBoxMansione.getSelectionModel().getSelectedIndex()==CHOICEBOX_INDEX_NESSUNO;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         inizializzaGraficaPulsanti();
         inizializzaControlloNumeroTelefono();
+        inizializzaChoiceBox();
         campoSpazioSelezionato.setText("NESSUNO");
         selezSpazioBtn.setOnAction(event -> mostraSelezSpazio());
     }
@@ -206,7 +235,34 @@ public class CreaDipendente implements Initializable {
             String cittaDomicilioDipendente = campoDomicilio.getText();
             String indirizzoDomicilioDipendente = campoResidenza.getText();
             String emailDipendente = campoEmail.getText();
-            String mansioneDipendente = campoMansione.getText();
+            
+            String mansioneDipendente;
+            
+            int indexChoiceBoxSelezionato = choiceBoxMansione.getSelectionModel().getSelectedIndex();
+            switch (indexChoiceBoxSelezionato) {
+                case CHOICEBOX_INDEX_DIRETTORE:
+                	mansioneDipendente = CHOICHEBOX_STRING_DIRETTORE;
+                    break;
+                case CHOICEBOX_INDEX_PROGRAMMATORE:
+                	mansioneDipendente = CHOICHEBOX_STRING_PROGRAMMATORE;            	
+				    break;
+				case CHOICEBOX_INDEX_MANAGER:
+					mansioneDipendente = CHOICHEBOX_STRING_MANAGER;            	
+				    break;
+				case CHOICEBOX_INDEX_SEGRETARIO:
+					mansioneDipendente = CHOICHEBOX_STRING_SEGRETARIO;
+				    break;
+				case CHOICEBOX_INDEX_CONTABILE:
+					mansioneDipendente = CHOICHEBOX_STRING_CONTABILE;
+				    break;
+				case CHOICEBOX_INDEX_BOSS:
+					mansioneDipendente = CHOICHEBOX_STRING_BOSS;
+				    break;
+                default:
+                	mansioneDipendente = "";
+                    break;
+            }
+
             String numTelefonoDipendente = campoNumTelefono.getText();
             Date dataNascitaDipendente = Date.valueOf(campoData.getValue());
             int codiceSpazioDipendente = AssegnaSpazioToDipendente.getCodiceSpazioSelezionato();

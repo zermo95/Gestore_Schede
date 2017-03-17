@@ -44,9 +44,9 @@ public class GestoreDiSistema implements Initializable, Observer {
     private static final int CHOICEBOX_INDEX_SPAZI = 2;
 
     /* -------- Valori della ChoicheBox ---------*/
-    private static final String CHOICHEBOX_STRING_DIPENDENTI = "Dipendenti";
-    private static final String CHOICHEBOX_STRING_STRUMENTAZIONI = "Strumentazioni";
-    private static final String CHOICHEBOX_STRING_SPAZI = "Spazi";
+    private static final String CHOICHEBOX_STRING_DIPENDENTI = "DIPENDENTI";
+    private static final String CHOICHEBOX_STRING_STRUMENTAZIONI = "STRUMENTAZIONI";
+    private static final String CHOICHEBOX_STRING_SPAZI = "SPAZI";
 
     /*------------------- Lista Schede ---------------------*/
     private static ObservableList<SchedaDescrittiva> listaSchede = FXCollections.observableArrayList();

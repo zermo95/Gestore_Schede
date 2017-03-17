@@ -45,6 +45,24 @@ public class ModificaDipendente implements Initializable {
         modDipPane = new BorderPane();
         instance = new ModificaDipendente();
     }
+    
+    /* -------- Indici della ChoiceBox ---------*/
+    private static final int CHOICEBOX_INDEX_NESSUNO = 0;
+    private static final int CHOICEBOX_INDEX_DIRETTORE = 1;
+    private static final int CHOICEBOX_INDEX_PROGRAMMATORE = 2;
+    private static final int CHOICEBOX_INDEX_MANAGER = 3;
+    private static final int CHOICEBOX_INDEX_SEGRETARIO = 4;
+    private static final int CHOICEBOX_INDEX_CONTABILE = 5;
+    private static final int CHOICEBOX_INDEX_BOSS = 6;
+
+    /* -------- Valori della ChoicheBox ---------*/
+    private static final String CHOICHEBOX_STRING_NESSUNO = "Seleziona";
+    private static final String CHOICHEBOX_STRING_DIRETTORE = "Direttore";
+    private static final String CHOICHEBOX_STRING_PROGRAMMATORE = "Programmatore";
+    private static final String CHOICHEBOX_STRING_MANAGER = "Manager";
+    private static final String CHOICHEBOX_STRING_SEGRETARIO = "Segretario";
+    private static final String CHOICHEBOX_STRING_CONTABILE = "Contabile";
+    private static final String CHOICHEBOX_STRING_BOSS = "Boss";
 
     /**
      * Istanza del controller per la modifica di un dipendente
@@ -78,7 +96,7 @@ public class ModificaDipendente implements Initializable {
     @FXML
     private TextField campoDomicilio;
     @FXML
-    private TextField campoMansione;
+    private ChoiceBox<String> choiceBoxMansione = new ChoiceBox<>();
     @FXML
     private Label campoSpazioSelezionato;
     @FXML
@@ -88,6 +106,17 @@ public class ModificaDipendente implements Initializable {
     private Button salvaDipendenteBtn;
     @FXML
     private Button annullaOperazioneBtn;
+    
+    private void inizializzaChoiceBox() {
+        // Imposta la ChoicheBox
+    	choiceBoxMansione.getItems().addAll(CHOICHEBOX_STRING_NESSUNO, CHOICHEBOX_STRING_DIRETTORE,
+    			CHOICHEBOX_STRING_PROGRAMMATORE, CHOICHEBOX_STRING_MANAGER, CHOICHEBOX_STRING_SEGRETARIO, CHOICHEBOX_STRING_CONTABILE, CHOICHEBOX_STRING_BOSS);
+    	
+    	// Imposta elemento di default
+    	choiceBoxMansione.setValue(CHOICHEBOX_STRING_NESSUNO);
+    	
+    }
+
 
     private static void mostraModificaDipendente() throws IOException {
 
@@ -149,7 +178,7 @@ public class ModificaDipendente implements Initializable {
         campoEmail.setText(d.getEmail());
         campoResidenza.setText(d.getCittaDomicilio());
         campoDomicilio.setText(d.getIndirizzoDomicilio());
-        campoMansione.setText(d.getMansione());
+        choiceBoxMansione.setValue(d.getMansione());
         if (d.getCodiceSpazio() == SPAZIO_VUOTO) {
             campoSpazioSelezionato.setText("NESSUNO");
         } else {
@@ -187,7 +216,7 @@ public class ModificaDipendente implements Initializable {
 
                 /* Controllo contatti/dati lavorativi */
                 campoNumTelefono.getText().isEmpty() ||
-                campoMansione.getText().isEmpty();
+                (choiceBoxMansione.getSelectionModel().getSelectedIndex() == CHOICEBOX_INDEX_NESSUNO);
     }
 
     private void apportaModificheDipendente(Dipendente d) throws IOException {
@@ -207,7 +236,32 @@ public class ModificaDipendente implements Initializable {
             d.setEmail(campoEmail.getText());
             d.setCittaDomicilio(campoResidenza.getText());
             d.setIndirizzoDomicilio(campoDomicilio.getText());
-            d.setMansione(campoMansione.getText());
+            
+            int indexChoiceBoxSelezionato = choiceBoxMansione.getSelectionModel().getSelectedIndex();
+            switch (indexChoiceBoxSelezionato) {
+                case CHOICEBOX_INDEX_DIRETTORE:
+                	d.setMansione(CHOICHEBOX_STRING_DIRETTORE);
+                    break;
+                case CHOICEBOX_INDEX_PROGRAMMATORE:
+                	d.setMansione(CHOICHEBOX_STRING_PROGRAMMATORE);            	
+				    break;
+				case CHOICEBOX_INDEX_MANAGER:
+					d.setMansione(CHOICHEBOX_STRING_MANAGER);            	
+				    break;
+				case CHOICEBOX_INDEX_SEGRETARIO:
+					d.setMansione(CHOICHEBOX_STRING_SEGRETARIO);
+				    break;
+				case CHOICEBOX_INDEX_CONTABILE:
+					d.setMansione(CHOICHEBOX_STRING_CONTABILE);
+				    break;
+				case CHOICEBOX_INDEX_BOSS:
+					d.setMansione(CHOICHEBOX_STRING_BOSS);
+				    break;
+                default:
+                	d.setMansione("");
+                    break;
+            }
+            
             d.setCodiceSpazio(ModificaAssegnazioneSpazioToDipendente.getCodiceSpazioSelezionato());
 
             // Controllo numero di telefono e avvio delle modifiche
@@ -228,6 +282,7 @@ public class ModificaDipendente implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         inizializzaGraficaPulsanti();
         inizializzaControlloNumeroTelefono();
+        inizializzaChoiceBox();
         selezSpazioBtn.setOnAction(event -> mostraSelezSpazio());
         annullaOperazioneBtn.setOnAction(event -> modDipStage.close());
     }
